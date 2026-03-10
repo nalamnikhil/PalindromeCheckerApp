@@ -1,31 +1,44 @@
-# PalindromeCheckerApp
+## UC6: Queue + Stack Based Palindrome Check
 
-## Objective
-The objective of this project is to design and implement a simple Java console application that checks whether a given string is a palindrome or not. The project helps in understanding basic Java programming concepts such as classes, methods, strings, loops, and conditional statements.
+### Goal
 
-## Running Procedure
-1. Open the project in IntelliJ IDEA.
-2. Navigate to the `src` folder.
-3. Run the Java file containing the `main` method.
-4. The program will check whether the given string is a palindrome and display the result in the console.
+To demonstrate palindrome checking using two different data structures: **Queue** and **Stack**.
+This use case highlights the behavioral difference between **FIFO (First In First Out)** and **LIFO (Last In First Out)** operations.
 
-## Flow of the Project
-1. The program starts execution from the `main()` method.
-2. A string value is defined in the program.
-3. The program reverses the string using a loop.
-4. The original string is compared with the reversed string.
-5. If both are equal, the program prints that the string is a palindrome.
-6. Otherwise, it prints that the string is not a palindrome.
+### Flow
 
-## Topics Covered
-- Java Classes
-- Main Method
-- String Handling
-- For Loop
-- Conditional Statements (if-else)
-- Console Output
+1. The program starts and takes a predefined string.
+2. Each character of the string is inserted into a **Queue** using the enqueue operation.
+3. The same characters are also pushed into a **Stack**.
+4. Characters are removed from the **Queue (dequeue)** and **Stack (pop)**.
+5. The program compares the removed characters.
+6. If all characters match, the string is identified as a **palindrome**.
 
-## Use Case Implemented
-### UC2 – Print a Hardcoded Palindrome Result
-In this use case, a hardcoded string (for example: "madam") is used in the program.  
-The program checks whether the string is a palindrome and prints the result on the console.
+### Key Concepts
+
+* **Queue (FIFO)** – The first element inserted is the first one removed.
+* **Stack (LIFO)** – The last element inserted is the first one removed.
+* **Enqueue Operation** – Adds elements to the queue.
+* **Dequeue Operation** – Removes elements from the queue.
+* **Push Operation** – Inserts elements into the stack.
+* **Pop Operation** – Removes elements from the stack.
+* **Comparison Logic** – Dequeued characters from the queue are compared with popped characters from the stack to determine if the string is a palindrome.
+
+### Data Structures Used
+
+* **Queue**
+* **Stack**
+
+### Example
+
+Input String:
+
+```
+madam
+```
+
+Output:
+
+```
+madam is a palindrome
+```
